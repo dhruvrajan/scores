@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+
+* {
+  font-family: "Roboto";
+}
+
+a, a:hover {
+  color: #BF5700;
+}
+
+.form-group {
+  padding-right: 1%;
+}
+
+#footer {
+  text-align: center;
+}

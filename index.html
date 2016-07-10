@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scores</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="header" class="container">
+    <h1>Scores</h1>
+    <h2>Determine college credit from test scores</h2>
+    <hr>
+  </div>
+  <div id="step1" class="container">
+    <h3>Select standardized test</h3>
+    <div class="btn-group" role="group" aria-label="...">
+      <button id="ap-button" type="button" class="btn btn-default">Advanced Placement</button>
+      <button type="button" class="btn btn-default disabled">More to come!</button>
+    </div>
+
+    <hr>
+  </div>
+
+  <div id="step2" class="container">
+    <h3 id="test-header"></h3>
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Test Name</label>
+        <select id="test-name-select" class="form-control"></select>
+      </div>
+      <div class="form-group">
+        <label>Test Score</label>
+        <select id="test-score-select" class="form-control"></select>
+      </div>
+      <button type="button" id="test-add" class="btn btn-success">Add</button>
+    </form>
+
+    <table id="test-table" class="table table-hover">
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button type="button" id="test-submit" class="btn btn-primary">Submit</button>
+
+    <hr>
+  </div>
+
+  <div id="step3" class="container">
+    <h3>Results</h3>
+
+    <table id="results-table" class="table table-hover">
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Score</th>
+          <th>Course(s)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <hr>
+  </div>
+
+  <div id="footer" class="container">
+    <p>Created by <a href="https://github.com/utexasdev">UT Developers</a></p>
+  </div>
+
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/ap-json.js"></script>
+</body>
+</html>
