@@ -18,7 +18,3 @@ branches:
   only:
     - master
     - develop
-
-after_success:
-  - codecov --token=fe1d8150-08d5-4218-9e23-ce6732978029
-  - codecov
