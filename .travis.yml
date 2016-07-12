@@ -1,8 +1,24 @@
+sudo: false
+
 language: python
+
 python:
+  - 3.2
+  - 3.3
+  - 3.4
   - 3.5
-install: pip install -r requirements.txt
-script: python3 -m unittest discover crawler
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python3 tests.py
+
 branches:
   only:
     - master
+    - develop
+
+after_success:
+  - codecov --token=fe1d8150-08d5-4218-9e23-ce6732978029
+  - codecov
