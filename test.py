@@ -14,8 +14,9 @@ def run_flake8_linter():
     # the project and find .py files to test
     res = subprocess.call(['flake8', 'crawler'])
     if res is not None:
-        sys.exit(1)
+        sys.exit(res)
 
 if __name__ == '__main__':
     run_unit_tests()
     run_flake8_linter()
+    sys.exit(0)
