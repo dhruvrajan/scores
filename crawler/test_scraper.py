@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from scraper import APExamScraper
+from .scraper import APExamScraper
 from bs4 import NavigableString
 import json
 import os

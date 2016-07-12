@@ -1,15 +1,21 @@
 from bs4 import BeautifulSoup, NavigableString
 from urllib.request import urlopen
+from urllib.error import HTTPError
 import json
+import time
 import os
 
 class APExamScraper(object):
     def __init__(self):
-        self.url = 'http://ctl.utexas.edu/studenttesting/exams?field_subject_area_tid=All&field_exam_type_tid=3&combine='
+        self.url = 'http://bit.ly/29zOCEC'
         self.soup = self._initialize()
 
     def _initialize(self):
-        html = urlopen(self.url)
+        try:
+            html = urlopen(self.url)
+        except HTTPError:
+            time.sleep(5)
+            self._initialize()
         soup = BeautifulSoup(html, 'html.parser')
         return soup
 
@@ -64,7 +70,7 @@ class APExamScraper(object):
     def export_json(self):
         exam_names = self.parse_exams()
         exam_data = self.parse_tables()
-        for name,table in zip(exam_names, exam_data):
+        for name, table in zip(exam_names, exam_data):
             table['name'] = name
         os.chdir('data')
         with open('ap.json', 'w+') as f:
