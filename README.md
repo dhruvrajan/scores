@@ -21,6 +21,6 @@ Because we're working with a [virtual environment](https://pypi.python.org/pypi/
 Contributions to this repository are always welcome – from those that have a lot to no experience at all!
 - Non-programmers: Take a look at the current website at [https://utexasdev.github.io/scores](https://utexasdev.github.io/scores). If there are problems with the website or features that should be implemented, file an issue on the [issues page](https://github.com/utexasdev/scores/issues).
 - Programmers: Get started by sifting through the issues on the [issues page](https://github.com/utexasdev/scores/issues).
-  - Issues with the tag `bugs` are problems with the application; these can probably be fixed in under 25 lines of code.
-  - Issues with the tag `enhancements` will require a more in-depth analysis of the project and a lot of coding/testing.
+  - Issues with the tag `bugs` are problems with the application; these can probably be fixed easily.
+  - Issues with the tag `enhancements` will require a more in-depth analysis of the project and a lot of coding, testing, and refactoring.
   - Pull requests should be submitted to the `develop` branch. PRs must pass the Travis CI and Codecov test in order to be merged. The `develop` branch will be merged with the `master` branch every week.
