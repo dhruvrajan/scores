@@ -52,5 +52,10 @@ $(document).ready(function() {
       }
       $('#step3').show();
     });
+    $('#test-clear').click(function() {
+       $('#results-table tbody').empty();
+       $('#test-table tbody').empty();
+    })
+
   });
 });
