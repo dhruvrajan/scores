@@ -58,11 +58,11 @@ $(document).ready(function() {
     });
 
     $('#print-button').click(function() {
-       var restorepage = document.body.innerHTML;
-       var printcontent = document.getElementById("step3").innerHTML;
-       document.body.innerHTML = printcontent;
+       var currentPage = document.body.innerHTML;
+       var printable = document.getElementById("step3").innerHTML;
+       document.body.innerHTML = printable;
        window.print();
-       document.body.innerHTML = restorepage;
+       document.body.innerHTML = currentPage;
     });
 
   });
