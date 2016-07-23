@@ -55,7 +55,15 @@ $(document).ready(function() {
     $('#test-clear').click(function() {
        $('#results-table tbody').empty();
        $('#test-table tbody').empty();
-    })
+    });
+
+    $('#print-button').click(function() {
+       var restorepage = document.body.innerHTML;
+       var printcontent = document.getElementById("step3").innerHTML;
+       document.body.innerHTML = printcontent;
+       window.print();
+       document.body.innerHTML = restorepage;
+    });
 
   });
 });
